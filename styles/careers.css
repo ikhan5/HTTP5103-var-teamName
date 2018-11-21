@@ -1,0 +1,26 @@
+#careers-banner {
+    background-color: #565656;
+    text-align: center;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#careers-banner img {
+    width: 80%;
+    height: auto;
+}
+
+#careers-banner-text {
+    padding-bottom: 50px;
+}
+
+#banner-title {
+    font-size: 42px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.careers-banner-text {
+    font-size: 20px;
+    margin: 0;
+}
