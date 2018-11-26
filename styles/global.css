@@ -16,7 +16,7 @@ a {
 } 
 
 body {
-    font-family: 'furiosadrive';
+    
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -31,6 +31,7 @@ main {
 }
 
 h1 {
+    font-family: 'furiosadrive';
     text-align: center;
     font-size: 6em;
     letter-spacing: 10px;
@@ -68,6 +69,124 @@ h1 {
 .welcome-design ul:hover li {
     animation: smoke 3s linear infinite;
 }
+
+/* Header */
+html {
+    font-size: 16px;
+}
+
+body {
+    height: 768px;
+    background: grey
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background: black;
+    height: 150px;
+    position: relative;
+}
+
+#logo-and-slogan {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+#logo{
+    width: 80px;
+    height: 110px;
+}
+#slogan {
+    color:white;
+    font-family: Nosifer, sans-serif;
+    margin-left: -40px;
+    pointer-events: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#top-nav,
+#top-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#top-nav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+#top-nav li {
+    display: inline-block;
+    margin-right: 1em;
+    vertical-align: top;
+    position: relative;
+}
+
+#top-nav li:last-child {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+#top-nav li a {
+    color: white;
+    font-size: 1.2em;
+    font-family: 'Tinos', sans-serif;
+    font-weight: lighter;
+    transition: 1.2s;
+}
+
+#top-nav li a:hover, #top-nav li a:focus {
+    color: red;
+}
+
+#top-nav li ul {
+    display: block;
+    position: absolute;
+    left: -10000px;
+    width: 150px;
+    padding:0;
+}
+
+#top-nav li ul li {
+    display: block;
+    padding-bottom: 5px; 
+    padding-left: 5px;
+}
+#top-nav li ul li:first-child{
+    padding-top:5px;
+}
+
+#top-nav ul li:hover ul {
+    left: 0;
+    background: black;
+    /* display: none; */
+}
+
+
+
+.hidden {
+    position: absolute;
+    left: -10000px;
+}
+
+img {
+    max-width: 100% !important;
+}
+
+
 
 /* Footer */
 
