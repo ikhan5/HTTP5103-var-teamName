@@ -1,0 +1,53 @@
+/* General styling */
+.page-wrapper {
+    width: 70%;
+    margin: auto;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+
+/* Specific styling */
+h1 {
+    margin: 48px 0 20px;
+}
+
+h2 {
+    margin: 20px 0 15px;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: #0074D9;
+}
+
+li a:hover {
+    font-weight: 600;
+}
+
+/* Display grid styling for the list */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+    text-align: center;
+    padding: 20px 0;
+    margin: 10px 10px;
+    border: 1px solid #ffffff;
+}
+
+.grid-focus {
+    border: 1px solid #80ffff;
+}
