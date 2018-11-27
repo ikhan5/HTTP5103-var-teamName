@@ -16,7 +16,6 @@ a {
 } 
 
 body {
-    
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -24,90 +23,24 @@ body {
     letter-spacing: 5px;
 }
 
-main {
-    background: #76749b url('images/background-main.png') no-repeat; 
-    background-size: cover;
-    height: 1000px;
-}
-
-h1 {
-    font-family: 'furiosadrive';
-    text-align: center;
-    font-size: 6em;
-    letter-spacing: 10px;
-    text-shadow: 1px 0px 6px rgba(150, 150, 150, 1);
-}
-
-.page-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.welcome-design {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.letter-space {
-    margin-left: 0.5em;
-}
-
-.welcome-design ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.welcome-design ul li {
-    list-style: none;
-    font-size: 3.5em;
-    letter-spacing: 10px;
-}
-
-.welcome-design ul:hover li {
-    animation: smoke 3s linear infinite;
-}
-
 /* Header */
-html {
-    font-size: 16px;
-}
-
-body {
-    height: 768px;
-    background: grey
-}
-
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-}
-
 #header {
     background: black;
-    height: 150px;
     position: relative;
 }
 
+#header-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
 #logo-and-slogan {
-    display: inline-block;
-    margin-top: 10px;
-    margin-left: 100px;
+    align-self: center;
 }
 
 #logo{
-    width: 80px;
-    height: 110px;
-}
-#slogan {
-    color:white;
-    font-family: Nosifer, sans-serif;
-    margin-left: -40px;
-    pointer-events: none;
+    margin-top: 1em;
+    max-width: 300px;
 }
 
 a {
@@ -116,21 +49,15 @@ a {
 
 #top-nav,
 #top-nav ul {
-    padding: 0;
-    margin: 0;
     list-style: none;
 }
 
 #top-nav {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translate(-50%, -50%);
+    align-self: center;
 }
 
 #top-nav li {
     display: inline-block;
-    margin-right: 1em;
     vertical-align: top;
     position: relative;
 }
@@ -144,7 +71,7 @@ a {
     color: white;
     font-size: 1.2em;
     font-family: 'Tinos', sans-serif;
-    font-weight: lighter;
+    font-weight: 100;
     transition: 1.2s;
 }
 
@@ -165,6 +92,7 @@ a {
     padding-bottom: 5px; 
     padding-left: 5px;
 }
+
 #top-nav li ul li:first-child{
     padding-top:5px;
 }
@@ -172,7 +100,7 @@ a {
 #top-nav ul li:hover ul {
     left: 0;
     background: black;
-    /* display: none; */
+    z-index: 800;
 }
 
 
@@ -182,17 +110,91 @@ a {
     left: -10000px;
 }
 
-img {
-    max-width: 100% !important;
+/*Main Section */
+
+main {
+    background-color: black;
 }
 
+#test {
+    background: #76749b url('../images/background-main.png') no-repeat; 
+    background-size: cover;
+    height: 800px;
+    padding-top: 0.1em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
 
+#welcome {
+    font-family: 'furiosadrive';
+    text-align: center;
+    font-size: 6em;
+    letter-spacing: 10px;
+    margin: 0;
+    padding: 0;
+}
 
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.welcome-design {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.letter-space {
+    margin-left: 0.5em;
+}
+
+.welcome-design ul {
+    font-family: 'furiosadrive';
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.welcome-design ul li {
+    list-style: none;
+    font-size: 3.5em;
+    letter-spacing: 10px;
+}
+
+.welcome-design ul:hover li {
+    animation: smoke 3s linear infinite;
+}
+
+#sub-container {
+    background-color: black;
+}
+
+.sub-heading {
+    bottom: 0;
+    text-transform: uppercase;
+}
+
+.sub-section {
+    padding: 1em;
+}
+
+.sub-section p {
+    text-transform: uppercase;
+}
+
+.sub-section-link {
+    background-color: red;
+    color: black;
+    padding: 0.3em;
+    max-width: 250px;
+}
 /* Footer */
 
 footer {
     background-color: black;
-    padding-top: 2em;
+    padding-top: 0.1em;
     font-family: sans-serif;
     height: 100%;
     letter-spacing: 0;
@@ -215,16 +217,17 @@ footer {
 }
 
 #footer-navigation {
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 #footer-nav-list li:hover {
     color: red;
+    transition: 1.2s;
 }
 
 #location-footer {
-    font-size: 0.7em;
-    margin-top: 3em;
+    font-size: 0.8em;
+    margin-top: 1.5em;
 }
 
 #footer-wrapper {
@@ -278,8 +281,39 @@ ul li:nth-child(5){
 /*cellphones */
 @media only screen and (max-width: 700px){
 
-    h1 {
-        font-size: 4em;
+    #logo{
+        max-width: 200px;
+    }
+
+    #top-nav ul li:hover ul {
+        z-index: -800;
+    }
+
+    #top-nav ul li:active ul {
+        left: 0;
+        background: black;
+        z-index: 800;
+    }
+
+    #top-nav-container {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    #top-nav-container {
+        text-align: center;
+    }
+
+    #top-nav-container li {
+        margin: 5px 0;
+    }
+
+    #test {
+        height: 100vh;
+    }
+
+    #welcome {
+        font-size: 4.5em;
     }
 
     .welcome-design ul li{
@@ -291,13 +325,35 @@ ul li:nth-child(5){
         height: 100vh;
         width: 100vw;
     }
+
+    #footer-navigation {
+        font-size: 0.8em;
+    }
+
+    #location-footer {
+        font-size: 0.7em;
+    }
 } 
 
 /*desktops */
 @media only screen and (min-width: 1000px){
 
-    h1 {
-        font-size: 7em;
+    #top-nav {
+        align-self: center;
+    }
+
+    #logo{
+        margin-top: 0;
+        max-width: 250px;
+        align-self: flex-start;
+    }
+
+    #header-wrapper {
+        flex-flow: row nowrap;
+    }
+
+    #test {
+        height: 1000px;
     }
 
     .welcome-design ul li{
@@ -308,7 +364,6 @@ ul li:nth-child(5){
     #footer-wrapper {
         display: flex;
         flex-flow: row wrap;
-        margin: 0 auto;
     }
 
     #social-media-links {
