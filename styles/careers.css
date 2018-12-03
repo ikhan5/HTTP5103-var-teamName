@@ -1,7 +1,6 @@
-/* General Classes */
-.page-wrapper {
-    width: 80%;
-    margin: auto;
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .text-center {
@@ -9,7 +8,7 @@
 }
 
 .jumbotron {
-    background-color: #e9ecef;
+    background-color: black;
     padding: 64px 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -23,7 +22,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* End of general classes */
+.flex-wrapper {
+    display: flex;
+}
+
+/* End of general styling */
 
 /* Jumbotron */
 #careers-jumbotron h1 {
@@ -44,37 +47,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* For trial with image */
-/* #careers-banner {
-    background-color: #575757;
-    text-align: center;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#careers-banner img {
-    width: 100%;
-    height: auto;
-}
-
-#careers-banner-text {
-    padding-bottom: 50px;
-}
-
-#banner-title {
-    font-size: 42px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.careers-banner-text {
-    font-size: 20px;
-    margin: 0;
-} */
-/* End of trial with image */
-
-
 /* Careers listing */
+#careers-listing {
+    color: #76749B;
+    letter-spacing: normal;
+}
+
+
 #careers-listing h2 {
     font-size: 2rem;
     margin-bottom: 30px;
@@ -85,7 +64,9 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid #808080;
     padding: 10px 0 10px 10px;;
     margin: 5px 0 10px;
-    background-color: #dfdfdf;
+    background-color: #76749B;
+    color: #b81c1b;
+    font-weight: 600;
 }
 
 #careers-accordion {
@@ -102,5 +83,110 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .accordion-bg-color {
-    background-color: #5ecbff!important;
+    background-color: black!important;
+    color: white!important;
+    font-weight: 600!important;
+}
+
+.accordion-career-number {
+    text-align: end;
+    color: #b81c1b;
+    font-weight: bold;
+}
+
+
+
+/* Application form styling */
+#career-application-form {
+    color: #76749B;
+    flex-flow: row;
+    flex-basis: wrap;
+    letter-spacing: 0;
+    padding: 50px 0;
+}
+
+#contact-details, #application-form {
+    flex: 1 0 50%;
+    flex-flow: column;
+    justify-content: center;
+    padding: 0 100px;
+}
+
+#contact-details {
+    background-image: 
+        linear-gradient(
+        rgba(0, 0, 0, 0.75), 
+        rgba(0, 0, 0, 0.75)
+        ),
+        url("../images/careers-details.jpg");
+    background-size: auto 100%;
+    color: #00ad5e;
+    padding: 50px 150px;
+}
+
+.contact-item span{
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#application-form h3 {
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.form-row {
+    margin: 10px 0;
+}
+
+.form-row > * {
+    border: 1px solid lightgrey;
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.form-row label, .form-row select {
+    display: block;
+    width: 100%;
+    border-bottom: none;
+}
+
+.form-row select {
+    border-bottom: 1px solid lightgrey;
+}
+
+.form-row >*:nth-child(3n) {
+    border-left: none;
+}
+
+.form-row input {
+    float: left;
+    width: 100%;
+}
+
+.form-row .input-name {
+    width: 50%;
+}
+
+input::placeholder {
+    color: lightgrey;
+}
+
+.form-row textarea {
+    width: 100%;
+}
+
+#application-form button {
+    min-width: 200px;
+    width: 30%;
+    padding: 12px 30px;
+    margin: 0 auto;
+    background-color: #00ad5e;
+    border: none;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
 }
