@@ -1,29 +1,192 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<title>TITLE HERE</title>
-<meta name="description" content="DESCRIPTION HERE"/>
-</head>
-    
-<body>
-    <div class="container" id="breakfast">
-        <h2>Breakfast</h2>
-    </div>
-    <div class="container" id="appetizers">
-        <h2>Appetizers</h2>
-    </div>
-    <div class="container" id="entrees">
-        <h2>Entrees</h2>
-    </div>
-    <div class="container" id="desserts">
-        <h2>Desserts</h2>
-    </div>
-    <div class="container" id="beverages">
-    <h2>Beverages</h2>
-    <div></div></div>
-    <script type="application/javascript" src="scripts/menu.js"></script>
-    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-</body>
+<!doctype html>
 
-</html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>The World's End</title>
+  <meta name="description" content="The World's End Restaurant">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"  href="font/webfontkit/stylesheet.css">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/menu.css">
+
+</head>
+
+<body>
+    <header id="header">
+      <div class="page-wrapper" id="header-wrapper">
+        <div id="logo-and-slogan">
+          <img id="logo" src="images/main-logo.png" alt="Restaurant Logo">
+          <h1 class="hidden">At's World's End</h1>
+        </div>
+        <nav id="top-nav">
+          <h2 class="hidden">Main Navigation</h2>
+          <ul id="top-nav-container">
+            <li> <a href="#">About Us</a>
+              <ul>
+                <li><a href="#">Meet The Team</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Locations</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Events &amp; Booking</a></li>
+
+            <li><a href="menu.html">Menu</a>
+              <ul>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Specials</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Contests</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </nav>
+      </div>
+      </header>
+  <main id="main">
+    <div class="page-wrapper">
+        <h2>Menu</h2> 
+            <div id="menu-accordion" class="accordion-block">
+
+            <h3 class="accordion-block">Breakfast</h3>
+            <div class="accordion-text accordion-block">
+              <div class="menu-item">
+                <div class="menu-text">
+                  <h4>Eggs Benedict</h4>
+                  <p class="dish-desc">Poached eggs, ham, and hollaindaise on our house-made English muffins. Served with a salad.</p>
+                </div>
+                <img class="dish-img" src="images/eggs-benedict.jpg"/>
+              </div>
+
+              <div class="menu-item">
+                <div class="menu-text">
+                  <h4>Omelette</h4>
+                  <p class="dish-desc">Our omelette contains eggs, chives, cheese, and your choice of ham, sausage, or veggie.</p>
+                </div>  
+                <img class="dish-img" src="images/omelettes.jpg"/>    
+              </div>
+              
+              <div class="menu-item">
+                <div class="menu-text">
+                  <h4>Pancakes</h4>
+                  <p class="dish-desc">Buttermilk pancakes served with Ontario maple syrup, fresh fruit, and whipped butter.</p>
+                </div>
+                <img class="dish-img" src="images/pancakes.jpg"/>
+              </div>
+              
+              <div class="menu-item">
+                <div class="menu-text">
+                  <h4>French Toast</h4>
+                  <p class="dish-desc">Our <em>pain perdu</em> made from challah bread and a honey custard. Served with Ontario maple syrup, fresh fruit, and whipped butter.</p>
+                </div>
+                <img class="dish-img" src="images/french-toast.jpg"/>
+              </div>
+              
+
+              <div class="menu-item">
+                <div class="menu-text">         
+                  <h4>Waffles</h4>
+                  <p class="dish-desc">Belgian waffles made with an oatmeal batter. Served with Ontario maple syrup, fresh fruit, and whipped butter.</p>
+                </div>
+                <img class="dish-img" src="images/waffles.jpg"/>
+              </div>
+            </div>
+
+            <h3 class="accordion-block">Entrées</h3>
+            <div class="accordion-text accordion-block">
+                <h4>Dish #1</h4>
+                <p>Test</p>
+                <h4>Dish #2</h4>
+                <p>Test</p>              
+                <h4>Dish #3</h4>
+                <p>Test</p>              
+                <h4>Dish #4</h4>
+                <p>Test</p>             
+                <h4>Dish #5</h4>
+                <p>Test</p>
+            </div>
+
+            <h3 class="accordion-block">Desserts</h3>
+            <div class="accordion-text accordion-block">
+                <h4>Dish #1</h4>
+                <p>Test</p>
+                <h4>Dish #2</h4>
+                <p>Test</p>              
+                <h4>Dish #3</h4>
+                <p>Test</p>              
+                <h4>Dish #4</h4>
+                <p>Test</p>             
+                <h4>Dish #5</h4>
+                <p>Test</p>
+            </div>
+
+            <h3 class="accordion-block">Beverages</h3>
+            <div class="accordion-text accordion-block">
+                <h4>Dish #1</h4>
+                <p>Test</p>
+                <h4>Dish #2</h4>
+                <p>Test</p>              
+                <h4>Dish #3</h4>
+                <p>Test</p>              
+                <h4>Dish #4</h4>
+                <p>Test</p>             
+                <h4>Dish #5</h4>
+                <p>Test</p>
+            </div>
+    </div>
+</main>
+<!--IMAGE SOURCES
+    Breakfast:
+    https://unsplash.com/photos/tHmNfVbus8w
+    https://unsplash.com/photos/GJAHkC6UMf0
+    https://unsplash.com/photos/zcUgjyqEwe8
+    https://unsplash.com/photos/dKxGVeb3F2w
+    https://pixabay.com/en/kitchen-omelet-eggs-food-healthy-775746/
+-->
+    <footer>
+        <div class="page-wrapper">
+          <div id="footer-wrapper">
+          <div id="social-media-links">
+            <ul>
+              <li><a href="#" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="#" class="fa fa-facebook"></a></li>
+            </ul>
+          </div>
+          <nav id="footer-navigation">
+            <ul id="footer-nav-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Locations</a></li>
+              <li><a href="#">Site Map</a></li>
+              <li><a href="#">Events Booking</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="#">Specials</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contests</a></li>
+              <li><a href="#">Gift Cards</a></li>
+            </ul>
+          </nav>
+          <div id="location-footer">
+            <p>205 Humber College Blvd, Etobicoke, ON M9W 5L7</p>
+            <p>416.966.9100</p>
+            <p><a href="#">Terms</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+            <p> &copy; 2018 At World's End</p>
+          </div>
+        </div>
+        </div>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type="text/javascript" src="scripts/global.js"></script>
+      <script type="text/javascript" src="scripts/menu.js"></script>
+      <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+    </body>
+    
+    </html>
