@@ -22,7 +22,7 @@ $(document).ready(function() {
         // console.log(document.getElementById('application-form'));
         document.getElementById('application-form').scrollIntoView();
         if(this === $('#applyWaiter')[0]){
-
+            
         }
     })
 })
