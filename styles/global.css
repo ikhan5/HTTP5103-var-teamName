@@ -24,6 +24,7 @@ body {
     color: white;
     letter-spacing: 1px;
     font-family: 'Playfair Display', serif;
+    background-color: black;
 }
 
 /* Header */
@@ -134,6 +135,7 @@ main {
 }
 
 .page-wrapper {
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }

@@ -1,11 +1,3 @@
-// $(document).ready(function() {
-//     $('#careers-accordion h3').click(function() {
-//         $('#careers-accordion>div').hide(400);
-//         $(this).next('div').fadeToggle(2000);
-//     })
-// });
-
-
 $(document).ready(function() {
     $('#careers-accordion h3').click(function() {
         if ($(this).next('div')[0].style['display'] === 'block') {
@@ -23,6 +15,14 @@ $(document).ready(function() {
         if (!$(event.target).hasClass('accordion-block')) {
             $('#careers-accordion>div').hide(400, 'swing');
             $('#careers-accordion>h3').removeClass('accordion-bg-color');
+        }
+    })
+
+    $('.accordion-apply-btn').click(function(e) {
+        // console.log(document.getElementById('application-form'));
+        document.getElementById('application-form').scrollIntoView();
+        if(this === $('#applyWaiter')[0]){
+            
         }
     })
 })
