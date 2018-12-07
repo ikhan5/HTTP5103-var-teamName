@@ -24,11 +24,9 @@ body {
     color: white;
     letter-spacing: 1px;
     font-family: 'Playfair Display', serif;
-    background-color: black;
 }
 
 /* Header */
-
 #header {
     background: black;
     position: relative;
@@ -113,83 +111,115 @@ body {
 
 main {
     background-color: black;
+    padding-bottom: 5px;
 }
 
-#main-contain {
-    background: #76749b url('../images/background-main.png') no-repeat; 
+#main {
+    background: #76749b url('../images/background.png') no-repeat; 
     background-size: cover;
-    height: 800px;
     padding-top: 0.1em;
+}
+
+#team-container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#team-layout {
+    margin: 0 auto;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     justify-content: center;
 }
 
-#welcome {
-    font-family: 'furiosadrive';
+h2 {
     text-align: center;
-    font-size: 6em;
-    letter-spacing: 10px;
-    margin: 0;
-    padding: 0;
+    font-family: 'furiosadrive';
+    font-size: 3.5em;
+    text-shadow: 5px -2px 20px #000000;
+
+}
+
+#about-us-para {
+    background-color: white;
+    color: black;
+    font-size: 1.2em;
+    padding: 20px;
+}
+
+#about-us-slogan {
+    text-align: center;
+    font-size: 1.8em;
+    text-shadow: 5px -2px 20px #000000;
 }
 
 .page-wrapper {
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+} 
+
+.bio-container {
+    position: relative;
+    margin: 20px;
 }
 
-.welcome-design {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.letter-space {
-    margin-left: 0.5em;
-}
-
-.welcome-design ul {
+.bio-container h4 {
+    font-size: 1.6em;
     font-family: 'furiosadrive';
+    letter-spacing: 3.5px;
     margin: 0;
-    padding: 0;
-    display: flex;
+    text-align: center;
+    color: white;
 }
 
-.welcome-design ul li {
-    list-style: none;
-    font-size: 3.5em;
-    letter-spacing: 10px;
+.bio-container h5 {
+    text-align: center;
+    color: red;
+    margin: 0;
+    font-size: 1.5em;
 }
 
-.welcome-design ul:hover li {
-    animation: smoke 3s linear infinite;
+.bio-container:hover .overlay {
+    opacity: 1;
 }
 
-#sub-container {
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .4s ease;
     background-color: black;
 }
 
-.sub-heading {
-    bottom: 0;
-    text-transform: uppercase;
+.bio {
+    color: white;
+    font-size: 1.5em;
+    position: absolute;
+    margin-top: 15%;
 }
 
-.sub-section {
-    padding: 1em;
+#career-container {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.5em;
 }
 
-.sub-section p {
-    text-transform: uppercase;
+#career-container a:hover, #career-container a:focus {
+    color: red;
+    transition: 1.2s;
 }
 
-.sub-section-link {
-    background-color: red;
-    color: black;
-    padding: 0.3em;
-    max-width: 250px;
-}
 /* Footer */
 
 footer {
@@ -230,7 +260,7 @@ footer {
 }
 
 #footer-wrapper {
-    margin: 2em;
+    margin: 0 20px;
 }
 
 #footer-nav-list {
@@ -307,24 +337,13 @@ ul li:nth-child(5){
         margin: 5px 0;
     }
 
-    #main-contain {
-        background: #76749b url('../images/background-main.png') no-repeat; 
-        background-size: contain;
-        height: 1000px;
+    #about-us-slogan {
+        margin: 0 20px;
     }
 
-    #welcome {
-        font-size: 4.5em;
-    }
-
-    .welcome-design ul li{
-        font-size: 2.5em;
-        letter-spacing: 5px;
-    }
-
-    main {
-        height: 100vh;
-        width: 100vw;
+    #career-container {
+        margin: 0 20px;
+        text-align: left;
     }
 
     #footer-navigation {
@@ -350,8 +369,12 @@ ul li:nth-child(5){
         justify-content: space-between;
     }
 
-    #main-contain {
-        height: 800px;
+    #test {
+        height: 1000px;
+    }
+
+    #about-us-para {
+        font-size: 1.8em;
     }
 
     .welcome-design ul li{

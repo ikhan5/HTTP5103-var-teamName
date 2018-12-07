@@ -2,40 +2,28 @@
 // this array stores my card data 
 const deck = [
     {
-        name: 'axe',
-        img: 'images/axe.png'
+        name: 'wine',
+        img: 'images/wine.png'
     },
     {
-        name: 'backpack',
-        img: 'images/backpack.png'
+        name: 'gun',
+        img: 'images/gun.png'
     },
     {
         name: 'firstaid',
         img: 'images/firstaid.png'
     },
     {
-        name: 'lighter',
-        img: 'images/lighter.png'
+        name: 'waterbottle',
+        img: 'images/waterbottle.png'
     },
     {
-        name: 'pocket knife',
-        img: 'images/pocketknife.png'
+        name: 'knife',
+        img: 'images/knife.png'
     },
     {
-        name: 'radio',
-        img: 'images/radio.png'
-    },
-    {
-        name: 'shotgun',
-        img: 'images/shotgun.png'
-    },
-    {
-        name: 'tent',
-        img: 'images/tent.png'
-    },
-    {
-        name: 'water',
-        img: 'images/water.png'
+        name: 'hammer',
+        img: 'images/hammer.png'
     }
 ];
 
@@ -84,6 +72,7 @@ const startGame = function() {
 
     let memoryDeck = deck
         .concat(deck) //duplicate my array
+        .concat(deck)
         .sort(() => 0.5 - Math.random()); //shuffles my array
 
         //this rigs my game, comment it out to properly play game
@@ -186,16 +175,40 @@ const startGame = function() {
         document.getElementById("timer").innerHTML = countdown;
         if(countdown <= 0) { //add a message that will ask if they want to startGame();
                 clearInterval(countdownTimer);
-                const result = confirm('Do you want to play again?'); //add a custom popup that takes up whole screen
-                if(result === true) {
-                    resetGame();
-                } else {
-                    window.location.reload(true); //reloads the page
-                }
+                //Here I create my modal window
+                const modalParent = document.getElementById('myModal');
+                const modal = document.createElement('div');
+                modalParent.appendChild(modal);
+                const modalContent = document.createElement('div');
+                const message = document.createElement("h5");
+                const tryAgainButton = document.createElement('button');
+                const leaveButton = document.createElement('button');
+                modalContent.appendChild(message);
+                modal.appendChild(modalContent);
+                modalContent.appendChild(tryAgainButton);
+                modalContent.appendChild(leaveButton);
+                tryAgainButton.innerHTML = "YES! I NEED THOSE BURGERS";
+                leaveButton.innerHTML = "NO!";
+                message.innerHTML = "YOU LOST!!! Do you want to try again?";
+                message.classList.add("message");
+                modal.classList.add('modal');
+                tryAgainButton.classList.add('button','modalButton');
+                leaveButton.classList.add('button', 'modalButton');
+                modalContent.classList.add('modal-content');
+                    //if user wants to play again, reset game
+                    tryAgainButton.onclick = function() {
+                        //modal.classList.remove("show");
+                        modal.remove(); //need to actually remove this div from the DOM or else it'll continue to appear
+                        resetGame();
+                    }
+                    //if user wants to leave, the page will reload
+                    leaveButton.onclick = function() {
+                        window.location.reload(true);
+                    }
             }
     }, 1000);
 
-    function resetGame() {
+    function resetGame() { //resetting all of my variables to their default setting before we play again
         executed = 0;
         countdown = 61;
         correctCount = 0;
@@ -215,7 +228,7 @@ const startGame = function() {
 
 };
 
-startbutton.addEventListener('click', startGame);
+startbutton.addEventListener('click', startGame); 
 
 
 
