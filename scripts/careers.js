@@ -21,8 +21,59 @@ $(document).ready(function() {
     $('.accordion-apply-btn').click(function(e) {
         // console.log(document.getElementById('application-form'));
         document.getElementById('application-form').scrollIntoView();
-        if(this === $('#applyWaiter')[0]){
-            
+        if (this === $('#applyHeadChef')[0]) {
+            $("#position_dropdown>option:eq(0)").prop("selected", true);
         }
+        else if(this === $('#applyAssCook')[0]){
+            $("#position_dropdown>option:eq(1)").prop("selected", true);
+        }
+        else if(this === $('#applyStoreManager')[0]){
+            $("#position_dropdown>option:eq(2)").prop("selected", true);
+        }
+        else if(this === $('#applyWaiter')[0]){
+            $("#position_dropdown>option:eq(3)").prop("selected", true);
+        }
+    })
+
+    $('#application-form').submit(function() {
+        if ($('#inFirstName')[0].value == ""){
+            $('#inFirstName').css("border-top", "2px solid red");
+            $('#inFirstName').focus();
+        }
+        else if ($('#inLastName')[0].value == ""){
+            $('#inFirstName').css("border-top", "1px solid lightgrey");
+            $('#inLastName').css("border-top", "2px solid red");
+            $('#inLastName').focus();
+        }
+        else if ($('#inEmail')[0].value == ""){
+            $('#inLastName').css("border-top", "1px solid lightgrey");
+            $('#inEmail').css("border-top", "2px solid red");
+            $('#inEmail').focus();
+        }
+        else if ($('#inResume')[0].value == ""){
+            $('#inEmail').css("border-top", "1px solid lightgrey");
+            $('#inResume').css("border-top", "2px solid red");
+            $('#inResume').focus();
+        }
+        else {
+            $('#inResume').css("border-top", "1px solid lightgrey");
+            $('#myModal-text span').text("," + $('#inFirstName')[0].value);
+            $('#myModal').css("display", "flex");
+        }
+        return false;
+    })
+
+    $('body').click(function(e) {
+        if (e.target == $('#myModal')[0]) {
+            $('#myModal').css("display", "none");
+        }
+    })
+
+    $('#continueBtn').click(function() {
+        $('#myModal').css("display", "none");
+    })
+
+    $('#homeBtn').click(function() {
+        window.location.href = "index.html";
     })
 })
