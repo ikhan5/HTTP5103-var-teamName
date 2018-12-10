@@ -9,27 +9,47 @@
     <link rel="stylesheet" href="styles/careers.css">
 </head>
 <body>
+    <header id="header">
+      <div class="page-wrapper" id="header-wrapper">
+        <div id="logo-and-slogan">
+          <a href="./index.html">
+            <img id="logo" src="images/main-logo.png" alt="Restaurant Logo">
+            <h1 class="hidden">The World's End</h1>
+          </a>
+        </div>
+        <nav id="top-nav">
+          <h2 class="hidden">Main Navigation</h2>
+          <ul id="top-nav-container">
+            <li> <a href="#">About Us</a>
+              <ul>
+                <li><a href="#">Meet The Team</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Locations</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Events &amp; Booking</a></li>
+
+            <li><a href="menu.html">Menu</a>
+              <ul>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#">Specials</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Contests</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <section class="jumbotron" id="careers-jumbotron">
         <div class="text-center">
             <h1>Join the Team<span>Come learn the Zombie way</span></h1>
-            <p>Show us the Zombie dedication. Take away the Zombie rewards.</p>
+            <p>Show us the dedication. Take away the rewards.</p>
         </div>
     </section>
 
-
-    <!-- This was a trial with an image -->
-    <!-- <section id="careers-banner">
-        <div class="page-wrapper">
-            <img src="images/zombies-at-work-careers-header.jpg" alt="Zombies hard are work">
-            <div id="careers-banner-text">
-                <p id="banner-title">Join the Zombie Team</p>
-                <p class="careers-banner-text">Come learn the Zombie way.</p>
-                <p class="careers-banner-text">Show us the Zombie dedication. Take away the Zombie rewards.</p>
-            </div>
-        </div>
-    </section> -->
-    <!-- End of trial with image -->
 
     <!-- Job postings -->
     <section id="careers-listing">
@@ -39,22 +59,29 @@
             <div id="careers-accordion" class="accordion-block">
                 <h3 class="accordion-block">Head Chef</h3>
                 <div class="accordion-text accordion-block">
+                    <p class="accordion-career-number">Number of position: <span>2</span></p>
                     <p class="accordion-block">Cook like you are going to have that meal</p>
+                    <button id="applyHeadChef" class="accordion-apply-btn accordion-block">Click to Apply</button>
                 </div>
 
                 <h3 class="accordion-block">Assistant Cook</h3>
                 <div class="accordion-text accordion-block">
-                    <p class="accordion-block">Cut that salad and chop that veggie</p>
+                    <p class="accordion-career-number">Number of position: <span>5</span></p>
+                    <p class="accordion-block">Cut that salad and chop that veggie</p><button id="applyAssCook" class="accordion-apply-btn accordion-block">Click to Apply</button>
                 </div>
 
                 <h3 class="accordion-block">Store Manager</h3>
                 <div class="accordion-text accordion-block">
+                    <p class="accordion-career-number">Number of position: <span>1</span></p>
                     <p class="accordion-block">Customers are your guests at home</p>
+                    <button id="applyStoreManager" class="accordion-apply-btn accordion-block">Click to Apply</button>
                 </div>
 
                 <h3 class="accordion-block">Waiter</h3>
                 <div class="accordion-text accordion-block">
+                    <p class="accordion-career-number">Number of position: <span>9</span></p>
                     <p class="accordion-block">Wait like you have all the time in the world</p>
+                    <button id="applyWaiter" class="accordion-apply-btn accordion-block">Click to Apply</button>
                 </div>
 
             </div>
@@ -63,8 +90,102 @@
         
     </section>
 
+    <!-- Application form -->
+    <section id="career-application-form">
+        <div class="page-wrapper flex-wrapper">
+            <div id="contact-details" class="flex-wrapper">
+                <div class="contact-item">
+                    <p><span>Address</span>205 Humber College Blvd, Etobicoke, ON M9W 5L7</p>
+                </div>
+                <div class="contact-item">
+                    <p><span>Let's talk</span>+1-(416)966-9100</p>
+                </div>
+                <div class="contact-item">
+                    <p><span>General Inquiries</span>careers@theworldsend.com</p>
+                </div>
+            </div>
+            <form id="application-form" class="flex-wrapper">
+                <h3>Apply with your resume</h3>
+                <div class="form-row">
+                    <label>Your full name *</label>
+                    <input type="text" placeholder="First Name" class="input-name" id="inFirstName">
+                    <input type="text" placeholder="Last Name" class="input-name" id="inLastName">
+                </div>
+                <div class="form-row">
+                    <label>Your email *</label>
+                    <input type="email" placeholder="Eg. example@example.com" id="inEmail">
+                </div>
+                <div class="form-row">
+                        <label>Applying for *</label>
+                        <select name="position" id="position_dropdown">
+                                <option id="dd_1" value="1">Head Chef</option>
+                                <option id="dd_2" value="2">Assistant Cook</option>
+                                <option id="dd_3" value="3">Store Manager</option>
+                                <option id="dd_4" value="4">Waiter</option>
+                              </select>
+                    </div>
+                <div class="form-row">
+                    <label>Your resume *</label>
+                    <input type="file" id="inResume" accept=".doc, .docx, .pdf">
+                </div>
+                <div class="form-row">
+                    <label>Message (Optional)</label>
+                    <textarea rows="10"></textarea>
+                </div>
+                <button type="submit">Apply</button>
+            </form>
+        </div>
+    </section> 
 
+    <!-- Modal section :: Hiddien until form is submitted -->
+    <section id="myModal" class="modal">
+        <div class="modal-content">
+            <div id="myModal-text" class="modal-text">
+                <p>Thank you for applying <span></span>!</p>
+                <p>Our HR team will get back to you shortly.</p>
+            </div>
+            <div id="modal-btns">
+                <button id="continueBtn" class="modal-btn">Continue Browsing</button>
+                <button id="homeBtn" class="modal-btn">Go to Home Page</button>
+            </div>
+        </div>
+    </section>
 
+    <footer>
+        <div class="page-wrapper">
+        <div id="footer-wrapper">
+        <div id="social-media-links">
+            <ul>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            </ul>
+        </div>
+        <nav id="footer-navigation">
+            <ul id="footer-nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="sitemap.html">Site Map</a></li>
+            <li><a href="#">Events Booking</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#">Specials</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="#">Contests</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            </ul>
+        </nav>
+        <div id="location-footer">
+            <p>205 Humber College Blvd, Etobicoke, ON M9W 5L7</p>
+            <p>416.966.9100</p>
+            <p><a href="#">Terms</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+            <p> &copy; 2018 At World's End</p>
+        </div>
+        </div>
+        </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="scripts/careers.js"></script>
 </body>

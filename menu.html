@@ -1,29 +1,384 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<title>TITLE HERE</title>
-<meta name="description" content="DESCRIPTION HERE"/>
-</head>
-    
-<body>
-    <div class="container" id="breakfast">
-        <h2>Breakfast</h2>
-    </div>
-    <div class="container" id="appetizers">
-        <h2>Appetizers</h2>
-    </div>
-    <div class="container" id="entrees">
-        <h2>Entrees</h2>
-    </div>
-    <div class="container" id="desserts">
-        <h2>Desserts</h2>
-    </div>
-    <div class="container" id="beverages">
-    <h2>Beverages</h2>
-    <div></div></div>
-    <script type="application/javascript" src="scripts/menu.js"></script>
-    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-</body>
+<!doctype html>
 
-</html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>The World's End</title>
+  <meta name="description" content="The World's End Restaurant">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"  href="font/webfontkit/stylesheet.css">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/menu.css">
+
+</head>
+
+<body>
+  <header id="header">
+    <div class="page-wrapper" id="header-wrapper">
+      <div id="logo-and-slogan">
+        <a href="./index.html">
+          <img id="logo" src="images/main-logo.png" alt="Restaurant Logo">
+          <h1 class="hidden">The World's End</h1>
+        </a>
+      </div>
+      <nav id="top-nav">
+        <h2 class="hidden">Main Navigation</h2>
+        <ul id="top-nav-container">
+          <li> <a href="#">About Us</a>
+            <ul>
+              <li><a href="#">Meet The Team</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Locations</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Events &amp; Booking</a></li>
+
+          <li><a href="menu.html">Menu</a>
+            <ul>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="#">Specials</a></li>
+            </ul>
+          </li>
+          <li><a href="game.html">Contests</a></li>
+          <li><a href="#">Gift Cards</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="page-wrapper">
+        <h2>Menu</h2> 
+            <div id="menu-accordion" class="accordion-block">
+
+            <h3 class="accordion-block">Breakfast</h3>
+            <div class="accordion-text accordion-block">
+              <div class="menu-item accordion-block">
+                <div class="menu-text accordion-block">
+                  <h4 class="accordion-block">Eggs Maledict</h4>
+                  <p class="dish-desc accordion-block">Poached eggs, ham, and hollaindaise with a subtle spice. Served on our house-made English muffins and with a salad.</p>
+                  <p class="accordion-block">$11</p>
+                </div>
+                <img class="dish-img accordion-block" alt="Eggs Benedict" title="Eggs Benedict" src="images/eggs-benedict.jpg"/>
+              </div>
+
+              <div class="menu-item accordion-block">
+                <div class="menu-text accordion-block">
+                  <h4>Zombelette</h4>
+                  <p class="dish-desc accordion-block">Our omelette contains eggs, chives, cheese, and your choice of ham, sausage, or veggie. For a small price more, you can get it filled with pulled pork. Yum.</p>
+                  <p class="accordion-block">$10</p>
+                </div>  
+                <img class="dish-img accordion-block" alt="Omelette" title="Omelette" src="images/omelettes.jpg"/>    
+              </div>
+              
+              <div class="menu-item accordion-block">
+                <div class="menu-text accordion-block">
+                  <h4>Paincakes</h4>
+                  <p class="dish-desc accordion-block">Buttermilk and cornmeal pancakes served with Ontario maple syrup, fresh fruit, and whipped butter.</p>
+                  <p class="accordion-block">$12</p>
+                </div>
+                <img class="dish-img accordion-block" alt="Pancakes" title="Pancakes" src="images/pancakes.jpg"/>
+              </div>
+              
+              <div class="menu-item accordion-block">
+                <div class="menu-text accordion-block">
+                  <h4>The Lost Bread</h4>
+                  <p class="dish-desc accordion-block">Our French toast is a true <em>pain perdu</em> made from challah bread and a honey custard. Served with Ontario maple syrup, fresh fruit, and whipped butter.</p>
+                  <p class="accordion-block">$12</p>
+                </div>
+                <img class="dish-img accordion-block" alt="French toast" title="French toast" src="images/french-toast.jpg"/>
+              </div>
+              
+
+              <div class="menu-item accordion-block">
+                <div class="menu-text accordion-block">         
+                  <h4>Hellgian Waffles</h4>
+                  <p class="dish-desc accordion-block">Belgian waffles made with an oatmeal batter. Served with Ontario maple syrup, fresh fruit, and whipped butter.</p>
+                  <p class="accordion-block">$12</p>
+                </div>
+                <img class="dish-img accordion-block" alt="Waffles" title="Waffles" src="images/waffles.jpg"/>
+              </div>
+            </div>
+
+            <h3 class="accordion-block">Appetizers</h3>
+            <div class="accordion-text accordion-block">
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">A Terrifying House Salad</h4>
+                      <p class="dish-desc accordion-block">Somehow, nowadays, the most terrifying thing you can eat in the world is leafy greens. So here's our house salad: fruits, pine nuts, soft cheese, and those spooky greens.</p>
+                      <p class="accordion-block">$8</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Salad" title="Salad" src="images/salad.jpg"/>
+                </div>
+
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">Infernal Hummus with Pita</h4>
+                      <p class="dish-desc accordion-block">Our hummus with a splash of olive oil and a spicy secret ingredient served with fresh baked pita wedges.</p>
+                      <p class="accordion-block">$8</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Hummus with Pita" title="Hummus with Pita" src="images/hummus.jpg">
+                </div>
+
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">Murder Most Fowl</h4>
+                      <p class="dish-desc accordion-block">Fried chicken wings dredged in a spiced flour and cornmeal mixture for a terrifying crunch. Served with a fiery hot sauce for dipping if you dare!</p>
+                      <p class="accordion-block">$12</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Chicken wings" title="Chicken wings" src="images/chickenwings.jpg">
+                </div>
+
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">El Chupacabra</h4>
+                      <p class="dish-desc accordion-block">For the most ravenous predators, start your meal with four tacos packed with meat, salsa, and cheese.</p>
+                      <p class="accordion-block">$12</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Tacos" title="Tacos" src="images/tacos.jpg">
+                </div>
+
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">Call of Cthulu</h4>
+                      <p class="dish-desc accordion-block">Our seafood bisque: calimari and shrimp in a creamy, tomato broth. No Eldritch horrors to fear here!</p>
+                      <p class="accordion-block">$15</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Seafood bisque" title="Seafood bisque" src="images/bisque.jpg">
+                </div>
+            </div>
+
+            <h3 class="accordion-block">Entrées</h3>
+            <div class="accordion-text accordion-block">
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">The Babadook</h4>
+                      <p class="dish-desc accordion-block">Our favourite! A cheeseburger with a hand-formed patty seared to perfection and topped with a dab of spicy garlic aioli.</p>
+                      <p class="accordion-block">$16</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Cheeseburger" title="Cheeseburger" src="images/burger.jpg">
+                </div>
+
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">The Birdbadook</h4>
+                      <p class="dish-desc accordion-block">Chicken more your speed? We got you covered. For good measure, we deep fry the chicken and top it with pickled cabbage and, yes, our aioli.</p>
+                      <p class="accordion-block">$16</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Fried chicken sandwich" title="Fried chicken sandwich" src="images/chickensandwich.jpg">
+                </div>
+
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">The Loch Ness Monster</h4>
+                      <p class="dish-desc accordion-block">The legend! The myth! Scottish fish and chips with tartar sauce and coleslaw.</p>
+                      <p class="accordion-block">$16</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Fish and chips" title="Fish and chips" src="images/fishandchips.jpg">
+                </div>
+
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">Sandwich of the Undead</h4>
+                      <p class="dish-desc accordion-block">Hickory smoked pulled pork sandwich on a soft bun. Served with coleslaw and pickles.</p>
+                    
+                      <p class="accordion-block">$16</p></div>
+                    <img class="dish-img accordion-block" alt="Pulled pork sandwich" title="Pulled pork sandwich" src="images/pulledpork.jpg">
+                </div>
+
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">Zombie Apocalypse</h4>
+                      <p class="dish-desc accordion-block">Pulled pork, ribs, tips, brisket, and wings, all smoked long and slow over hickory chips. We serve it with corn, biscuits, and potatoes. We warn even our most daring diners not to go alone.</p>
+                      <p class="accordion-block">$30</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Barbecue platter" title="Barbecue platter" src="images/barbecue.jpg">
+                </div>
+            </div>
+
+            <h3 class="accordion-block">Desserts</h3>
+            <div class="accordion-text accordion-block">
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">Spoooooookies</h4>
+                      <p class="dish-desc accordion-block">A couple of simple cookies for the Cookie Monster inside you. Salted chocolate chip, ginger molasses, and white chocolate macadamia nut are your options. Mmmmm, cookies.</p>
+                      <p class="accordion-block">$6</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Cookies" title="Cookies" src="images/cookies.jpg">
+                </div>
+
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">Darkest Chocolate Brownie</h4>
+                      <p class="dish-desc accordion-block">We almost called it a <em>frownie</em>, but there's no way you'll be frowning when you're eating this brownie. Dark chocolate, ooey and gooey moist interior, and a bit of chocolate sauce to top it off.</p>
+                      <p class="accordion-block">$6</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Brownie" title="Brownie" src="images/brownie.jpg">
+                </div>
+
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">Devil's Food Cake</h4>
+                      <p class="dish-desc accordion-block">Oh yeah, make a deal with the devil and get a slice of this devilish, decadent layered cake. So light yet flavourful, it must be sinful.</p>
+                      <p class="accordion-block">$9</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Chocolate cake" title="Chocolate cake" src="images/chocolatecake.jpg">
+                </div>
+
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">Thrill Crepe Cake</h4>
+                      <p class="dish-desc accordion-block">A slice of <em>mille crepe</em> cake: 20 layers of thin crepes, each alternated with a green tea custard. So delicate, light, and delicious!</p>
+                      <p class="accordion-block">$12</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Mille crepe cake" title="Mille crepe cake" src="images/millecrepe.jpg">
+                </div>
+
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">Brains... we're kidding, it's Cheesecake</h4>
+                      <p class="dish-desc accordion-block">It's dense, it's luxurious, and it's delicious. Look, we wouldn't mess around with you when it comes to cheesecake. We just wouldn't mess with you like that.</p>
+                      <p class="accordion-block">$12</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Cheesecake" title="Cheesecake" src="images/cheesecake.jpg">
+                </div>
+            </div>
+
+            <h3 class="accordion-block">Witches' Brews: Our Drinks</h3>
+            <div class="accordion-text accordion-block">
+                <p class="accordion-block">It's exhausting at the end of the world, so take a load off with any one of our fantastic brews.</p>
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">Ale</h4>
+                      <p class="dish-desc accordion-block">ABV 5.4%. A hoppy punch in the face in both complexity and intensity. Some juiciness, some dankness, and some bitterness to round everything out.</p>
+                      <p class="accordion-block">$8</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Ale" title="Ale" src="images/ale.jpg">
+                </div>
+
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">Pilsner</h4>
+                      <p class="dish-desc accordion-block">ABV 5.5%. Notes of perfume, citrus, and spice all at once. A bit of hop spice and a peppery finish.</p>
+                      <p class="accordion-block">$8</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Pilsner" title="Pilsner" src="images/pilsner.jpg">
+                </div>
+
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block"><em>Kölsch</em></h4>
+                      <p class="dish-desc accordion-block">ABV 4.8%. Our refined take on the <em>kölsch</em>. Dry and quaffable and right down the middle between the cracker-like malt and the floral hops.</p>
+                      <p class="accordion-block">$9</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Kölsch" title="Kölsch" src="images/malt.jpg">
+                </div>
+
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">Dark Stout</h4>
+                      <p class="dish-desc accordion-block">ABV 7%. Our tough and burly take on stout, expect a solid roast  and a backbone of bitterness balanced with floral hops and a touch of fruitiness.</p>
+                      <p class="accordion-block">$9</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Dark stout" title="Dark stout" src="images/stout.jpg">
+                </div>
+
+                <div class="menu-item accordion-block">
+                    <div class="menu-text accordion-block">
+                      <h4 class="accordion-block">Porter</h4>
+                      <p class="dish-desc accordion-block">ABV 6.5%. This coffee porter is so approachable and aromatic, begging you to take a sip. Assertive at first, you will come back for its mild sweetness, mild fruitiness, and chocolate.</p>
+                      <p class="accordion-block">$10</p>
+                    </div>
+                    <img class="dish-img accordion-block" alt="Porter" title="Porter" src="images/porter.jpg">
+                </div>
+            </div>
+    </div>
+
+    <div id="modal-image-area">
+        <span class="close">&times;</span>
+        <img id="modal-img">
+        <p id="caption"></p>
+    </div>
+  </main>
+<!--IMAGE SOURCES
+    Breakfast:
+    https://unsplash.com/photos/tHmNfVbus8w
+    https://unsplash.com/photos/GJAHkC6UMf0
+    https://unsplash.com/photos/zcUgjyqEwe8
+    https://unsplash.com/photos/dKxGVeb3F2w
+    https://pixabay.com/en/kitchen-omelet-eggs-food-healthy-775746/
+
+    Appetizers:
+    https://unsplash.com/photos/2hBUvhe81mU
+    https://pixabay.com/en/hummus-falafel-authentic-greek-1649230/
+    https://unsplash.com/photos/V2Kw-YC7Cls
+    https://www.pexels.com/photo/squid-soup-on-red-ceramic-bowl-1618925/
+    https://www.pexels.com/photo/cooked-leg-chicken-with-green-vegetable-leaf-60616/
+
+    Entree:
+    https://pixabay.com/en/burger-food-delicious-cheeseburger-3783181/
+    https://www.pexels.com/photo/bbq-food-451549/
+    https://pixabay.com/en/pork-meat-slow-cooked-food-dinner-1329681/
+    https://pixabay.com/en/fish-and-chips-scotland-2753360/
+    https://unsplash.com/photos/pLKgCsBOiw4
+
+    Desserts:
+    https://www.pexels.com/photo/blueberries-cake-chocolate-chocolate-cake-291528/
+    https://www.pexels.com/photo/cheesecake-1126359/
+    https://pixabay.com/en/crepe-cake-cake-dessert-tea-time-972944/
+    https://www.pexels.com/photo/chocolate-with-milted-chocolate-on-white-ceramic-plate-45202/
+    https://www.pexels.com/photo/baked-baking-biscuits-bread-298485/
+
+    Drinks:
+    https://pixabay.com/en/beer-ale-bitter-fermented-422138/
+    https://www.pexels.com/photo/depth-of-field-photo-of-two-pilsner-glasses-681847/
+    https://pixabay.com/en/craft-beer-dark-beer-porter-brewery-2468985/
+    https://pixabay.com/en/dark-beer-stout-glass-bar-bokeh-924823/
+    https://pixabay.com/en/beer-tipple-drink-glass-mug-1667151/
+-->
+  <footer>
+    <div class="page-wrapper">
+      <div id="footer-wrapper">
+      <div id="social-media-links">
+        <ul>
+          <li><a href="#" class="fa fa-instagram"></a></li>
+          <li><a href="#" class="fa fa-twitter"></a></li>
+          <li><a href="#" class="fa fa-facebook"></a></li>
+        </ul>
+      </div>
+      <nav id="footer-navigation">
+        <ul id="footer-nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="sitemap.html">Site Map</a></li>
+          <li><a href="#">Events Booking</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="#">Specials</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="game.html">Contests</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </nav>
+      <div id="location-footer">
+        <p>205 Humber College Blvd, Etobicoke, ON M9W 5L7</p>
+        <p>416.966.9100</p>
+        <p><a href="#">Terms</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+        <p> &copy; 2018 At World's End</p>
+      </div>
+    </div>
+    </div>
+  </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type="text/javascript" src="scripts/global.js"></script>
+      <script type="text/javascript" src="scripts/menu.js"></script>
+      <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+    </body>
+    
+    </html>

@@ -1,7 +1,6 @@
-/* General Classes */
-.page-wrapper {
-    width: 80%;
-    margin: auto;
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .text-center {
@@ -9,7 +8,7 @@
 }
 
 .jumbotron {
-    background-color: #e9ecef;
+    background-color: black;
     padding: 64px 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -23,7 +22,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* End of general classes */
+.flex-wrapper {
+    display: flex;
+}
+
+/* End of general styling */
 
 /* Jumbotron */
 #careers-jumbotron h1 {
@@ -44,48 +47,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* For trial with image */
-/* #careers-banner {
-    background-color: #575757;
-    text-align: center;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#careers-banner img {
-    width: 100%;
-    height: auto;
-}
-
-#careers-banner-text {
-    padding-bottom: 50px;
-}
-
-#banner-title {
-    font-size: 42px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.careers-banner-text {
-    font-size: 20px;
-    margin: 0;
-} */
-/* End of trial with image */
-
-
 /* Careers listing */
+#careers-listing {
+    background-color: #76749B;
+    color: black;
+    letter-spacing: normal;
+    padding: 50px 0 70px;
+}
+
+
 #careers-listing h2 {
     font-size: 2rem;
     margin-bottom: 30px;
     text-align: center;
+    color: white;
 }
 
 #careers-listing h3 {
-    border: 1px solid #808080;
-    padding: 10px 0 10px 10px;;
+    border: 1px solid #433E3F;
+    padding: 10px 0 10px 10px;
     margin: 5px 0 10px;
-    background-color: #dfdfdf;
+    background-color: #3C4976;
+    color: white;
+    font-weight: 600;
 }
 
 #careers-accordion {
@@ -93,14 +77,158 @@ h1, h2, h3, h4, h5, h6 {
     margin: auto;
 }
 
-#careers-accordion div {
-    padding: 10px 0 20px;
-}
-
 .accordion-text {
     display: none;
+    padding: 10px 10px 20px;
 }
 
 .accordion-bg-color {
-    background-color: #5ecbff!important;
+    background-color: black!important;
+    color: #b81c1b!important;
+    font-weight: 600!important;
+}
+
+.accordion-career-number {
+    text-align: end;
+    font-style: italic;
+    margin: 0;
+}
+
+.accordion-apply-btn {
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 3px;
+    
+}
+
+
+
+/* Application form styling */
+#career-application-form {
+    color: #76749B;
+    flex-flow: row;
+    flex-basis: wrap;
+    letter-spacing: 0;
+    padding: 50px 0;
+}
+
+#application-form * {
+    color: #3C4976;
+}
+
+#contact-details, #application-form {
+    flex: 1 0 50%;
+    flex-flow: column;
+    justify-content: center;
+    padding: 0 100px;
+}
+
+#contact-details {
+    background-image: 
+        linear-gradient(
+        rgba(0, 0, 0, 0.75), 
+        rgba(0, 0, 0, 0.75)
+        ),
+        url("../images/careers-details.jpg");
+    background-size: auto 100%;
+    color: #858eac;
+    padding: 50px 150px;
+}
+
+.contact-item span{
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#application-form h3 {
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.form-row {
+    margin: 10px 0;
+    background-color: white;
+}
+
+.form-row > * {
+    border: 1px solid lightgrey;
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.form-row label, .form-row select {
+    display: block;
+    width: 100%;
+    border-bottom: none;
+}
+
+.form-row select {
+    border-bottom: 1px solid #3C4976;
+}
+
+.form-row >*:nth-child(3n) {
+    border-left: none;
+}
+
+.form-row input {
+    float: left;
+    width: 100%;
+}
+
+.form-row .input-name {
+    width: 50%;
+}
+
+input::placeholder {
+    color: lightgrey;
+}
+
+.form-row textarea {
+    width: 100%;
+}
+
+#application-form button {
+    min-width: 200px;
+    width: 30%;
+    padding: 12px 30px;
+    margin: 0 auto;
+    background-color: #3C4976;
+    border: none;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+
+
+/* Modal styling */
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #3C4976;
+    padding: 30px;
+    border: 1px solid #433E3F;
+    max-width: 40%;
+}
+
+#myModal {
+    display: none;
 }
