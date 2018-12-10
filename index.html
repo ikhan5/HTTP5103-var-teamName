@@ -16,15 +16,15 @@
 </head>
 
 <body>
-      <header id="header">
+    <header id="header">
+      <div class="page-wrapper" id="header-wrapper">
         <div id="logo-and-slogan">
-          <img id="logo" src="images/website-logo.png" alt="Restaurant Logo">
-          <h1 class="hidden">Restaurant Name</h1>
-          <p id="slogan">at world's end</p>
+          <img id="logo" src="images/main-logo.png" alt="Restaurant Logo">
+          <h1 class="hidden">At's World's End</h1>
         </div>
         <nav id="top-nav">
           <h2 class="hidden">Main Navigation</h2>
-          <ul>
+          <ul id="top-nav-container">
             <li> <a href="#">About Us</a>
               <ul>
                 <li><a href="#">Meet The Team</a></li>
@@ -45,30 +45,35 @@
             <li><a href="#">Careers</a></li>
           </ul>
         </nav>
+      </div>
       </header>
   <main>
     <div class="page-wrapper">
-      <h1>Welcome</h1>
-      <div class="welcome-design">
-        <ul>
-          <li>A</li>
-          <li>t</li>
-          <li class="letter-space">W</li>
-          <li>o</li>
-          <li>r</li>
-          <li>l</li>
-          <li>d</li>
-          <li>'</li>
-          <li>s</li>
-          <li class="letter-space">E</li>
-          <li>n</li>
-          <li>d</li>
-        </ul>
-      </div>
+    <div id="test">
+    <h2 id="welcome">Welcome</h2>
+    <div class="welcome-design">
+      <ul>
+        <li>A</li><li>t</li><li class="letter-space">W</li><li>o</li><li>r</li><li>l</li><li>d</li><li>'</li><li>s</li><li class="letter-space">E</li><li>n</li><li>d</li>
+      </ul>
     </div>
+    </div>
+  </div>
   </main>
+  <section id="sub-container">
+      <div class="sub-section page-wrapper">
+        <h3 class="sub-heading">Warning: delicious food + drinks</h3>
+        <p>Pre-zombie apocalyptic comfort food on your block</p>
+        <p class="sub-section-link"><a href="#">see our menus >></a></p>
+      </div>
+      <div class="sub-section page-wrapper">
+          <h3 class="sub-heading">Eat at your own risk</h3>
+          <p>Make your reservation</p>
+          <p class="sub-section-link"><a href="#">Book a table >></a></p>
+      </div>
+    </section>
   <footer>
-    <div class="page-wrapper" id="footer-wrapper">
+    <div class="page-wrapper">
+      <div id="footer-wrapper">
       <div id="social-media-links">
         <ul>
           <li><a href="#" class="fa fa-instagram"></a></li>
@@ -98,6 +103,7 @@
         <p><a href="#">Privacy Policy</a></p>
         <p> &copy; 2018 At World's End</p>
       </div>
+    </div>
     </div>
   </footer>
 </body>
