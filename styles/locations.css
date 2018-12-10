@@ -1,0 +1,16 @@
+[id^="row"] {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.location {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 400px;
+}
+
+[id$="Map"] {
+    height: 182.81px;
+}  
+
