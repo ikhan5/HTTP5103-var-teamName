@@ -143,7 +143,7 @@ h2 {
 #about-us-para {
     background-color: white;
     color: black;
-    font-size: 1.2em;
+    font-size: 0.8em;
     padding: 20px;
 }
 
@@ -224,6 +224,7 @@ h2 {
 #career-container a:hover, #career-container a:focus {
     color: red;
     transition: 1.2s;
+    cursor: pointer;
 }
 
 /* Footer */
@@ -380,7 +381,7 @@ ul li:nth-child(5){
     }
 
     #about-us-para {
-        font-size: 1.8em;
+        font-size: 1.2em;
     }
 
     .welcome-design ul li{
