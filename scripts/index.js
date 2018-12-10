@@ -5,5 +5,5 @@ function loadingAnimation() {
    loading.classList.add('visible'); 
    setTimeout(function(){
     loading.classList.remove('visible');
-   }, 4000);
+   }, 5000);
 }
