@@ -22,7 +22,7 @@ body {
     margin: 0;
     padding: 0;
     color: white;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-family: 'Playfair Display', serif;
 }
 
@@ -213,6 +213,12 @@ h2 {
     margin-top: 30px;
     text-align: center;
     font-size: 1.5em;
+}
+
+#career-container a {
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-color: red;
 }
 
 #career-container a:hover, #career-container a:focus {
