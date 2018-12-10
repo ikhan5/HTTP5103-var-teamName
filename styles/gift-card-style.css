@@ -1,0 +1,322 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+*, *:before, *:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.route {
+  display: none;
+}
+
+#gift-main {
+    display: flex;
+    justify-content: center;
+    margin: 130px 0;
+}
+
+.giftcard {
+  height: 300px;
+  width: 500px;
+  font-family: PT Sans, sans-serif;
+  overflow: hidden;
+  border-radius: 1.5rem/2rem;
+  box-shadow: 8px 10px 16px rgba(0, 0, 0, 0.1);
+  transform: translateZ(0);
+    background-color: #e5e5e5;
+}
+
+.giftcard-content, .giftcard-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% - 5rem);
+  width: 100%;
+}
+
+.cover-img {
+    width: 90%;
+}
+
+.giftcard-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.giftcard-cover > .fa-apple {
+  color: white;
+  font-size: 6rem;
+}
+
+.giftcard-content {
+  padding: 1rem 2rem;
+  color: #939393;
+  z-index: 1;
+}
+
+.giftcard-content > * {
+  transform: translateX(3rem);
+  opacity: 0;
+}
+
+.giftcard-content h2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.giftcard-content h3 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: normal;
+}
+
+.giftcard-content h2, .giftcard-content h3 {
+  color: #232323;
+}
+
+.giftcard-content div {
+  font-size: 1.15rem;;
+}
+
+.giftcard-content address {
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+
+.giftcard-content a, .giftcard-content .subtext {
+  color: #76749B;
+}
+
+.giftcard-content a {
+  display: block;
+  text-decoration: none;
+}
+
+.giftcard-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5rem;
+  width: 100%;
+  background: white;
+  z-index: 3;
+  transform: translateZ(0);
+}
+
+.giftcard-footer > * {
+  float: left;
+}
+
+.giftcard-text, .giftcard-info {
+  width: calc(100% - 150px);
+  padding: 1rem;
+}
+
+.giftcard-text {
+  height: 100%;
+  padding: 1rem;
+}
+
+.giftcard-text > h1, .giftcard-text > h2 {
+  margin: 0;
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.giftcard-text h1 {
+  font-size: 1.5rem;
+  color: #b81c1b;
+}
+
+.giftcard-text h2 {
+  font-size: 1.2rem;
+  color: #939393;
+}
+
+.giftcard-info {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  text-align: right;
+  transform: translateX(100%);
+  display: table;
+  padding-left: 0;
+  background: white;
+}
+
+.giftcard-info > * {
+  display: table-cell;
+}
+
+.giftcard-info > *:first-child {
+  padding-right: 1rem;
+}
+
+.giftcard-info input[type="text"] {
+  height: 50px;
+  width: 100%;
+  padding: 0 1rem;
+  appearance: none;
+  background: transparent;
+  border: 1px solid #dedede;
+}
+
+.button, input[type="text"] {
+  border-radius: 3px;
+}
+
+.button {
+  display: inline-block;
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #76749B;
+  color: #FFF;
+  font-size: 1.3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-decoration: none;
+}
+
+.button.checkout {
+  background: #b81c1b;
+}
+
+.giftwrap {
+  width: 150px;
+  height: 150px;
+}
+
+.giftwrap .button {
+  width: 100px;
+  top: calc(50% - 25px);
+  left: calc(50% - 50px);
+}
+
+.giftwrap:before, .giftwrap:after {
+  display: none;
+  content: '';
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  top: 0;
+  left: 0;
+}
+
+.ribbon {
+  width: 150px;
+  height: 150px;
+  top: calc(50% - 75px);
+}
+.ribbon:before, .ribbon:after {
+  display: none;
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  left: 0;
+}
+
+
+#buy:target ~ .giftcard .giftwrap:before {
+    animation: wrap-before-2 0.6s cubic-bezier(0.77, 0, 0.175, 1) both;
+}
+#buy:target ~ .giftcard .giftwrap:after {
+    animation: wrap-after-2 0.6s cubic-bezier(0.77, 0, 0.175, 1) both;
+}
+#buy:target ~ .giftcard .bow {
+    display: block;
+    animation: bow 0.3s 0.72s cubic-bezier(0.175, 0.885, 0.32, 1.65) forwards;
+}   
+#buy:target ~ .giftcard .ribbon:before, #buy:target ~ .giftcard .ribbon:after {
+    display: block;
+}
+#buy:target ~ .giftcard .ribbon:before {
+    animation: ribbon-before 0.6s 0.2s cubic-bezier(0.77, 0, 0.175, 1) both;
+}
+#buy:target ~ .giftcard .ribbon:after {
+    animation: ribbon-after 0.6s 0.2s cubic-bezier(0.77, 0, 0.175, 1) both;
+}
+#buy:target ~ .giftcard .giftcard-footer {
+    animation: footer 0.6s 0.72s cubic-bezier(0.77, 0, 0.175, 1) both;
+}
+#buy:target ~ .giftcard .giftcard-cover {
+    animation: cover 0.6s 0.72s cubic-bezier(0.77, 0, 0.175, 1) both;
+}
+#buy:target ~ .giftcard .giftcard-content > * {
+    animation: content 0.6s 0.72s cubic-bezier(0.77, 0, 0.175, 1) both;
+}
+#buy:target ~ .giftcard .giftcard-content > *:nth-child(1) {
+    animation-delay: 0.72s;
+}
+#buy:target ~ .giftcard .giftcard-content > *:nth-child(2) {
+    animation-delay: 0.77s;
+}
+#buy:target ~ .giftcard .giftcard-content > *:nth-child(3) {
+    animation-delay: 0.82s;
+}
+
+@-webkit-keyframes button {
+  to {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes button {
+  to {
+    transform: scale(0.9);
+  }
+}
+@-webkit-keyframes content {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes content {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes cover {
+  to {
+    transform: translateY(calc(100% - 1px)) scaleX(0.95);
+  }
+}
+@keyframes cover {
+  to {
+    transform: translateY(calc(100% - 1px)) scaleX(0.95);
+  }
+}
+@-webkit-keyframes footer {
+  to {
+    transform: translateX(calc(-100% + 150px));
+  }
+}
+@keyframes footer {
+  to {
+    transform: translateX(calc(-100% + 150px));
+  }
+}
+
+
+
