@@ -135,7 +135,7 @@ const startGame = function() {
     }
 
     //function for the card selections
-    function selectedCard(){
+    function selectedCard(event){
         let selected = event.target;
         if(selected.nodeName === 'UL' || selected === nextTry 
         || selected.parentNode.classList.contains('selected') || selected.parentNode.classList.contains('match')
