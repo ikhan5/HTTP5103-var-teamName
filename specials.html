@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Our Specials!</title>
+    <link rel="stylesheet" type="text/css" href="styles/specials.css">
+    <link rel="stylesheet" type="text/css" href="styles/global.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Roboto" rel="stylesheet">
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"  href="font/webfontkit/stylesheet.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="page-wrapper" id="header-wrapper">
+            <div id="logo-and-slogan">
+                <a href="./index.html">
+                    <img id="logo" src="images/main-logo.png" alt="Restaurant Logo">
+                    <h1 class="hidden">The World's End</h1>
+                </a>
+            </div>
+            <nav id="top-nav">
+                <h2 class="hidden">Main Navigation</h2>
+                <ul id="top-nav-container">
+                    <li> <a href="aboutus.html">About Us</a>
+                        <ul>
+                            <li><a href="aboutus.html">Meet The Team</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="locations.html">Locations</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="booking.html">Events &amp; Booking</a></li>
+
+                    <li><a href="menu.html">Menu</a>
+                        <ul>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="specials.html">Specials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="game.html">Contests</a></li>
+                    <li><a href="giftcard.html">Gift Cards</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="page-wrapper">
+        <main id="main">
+            <h1>Specials at World's End Restaurant</h1>
+            <div class="slideshow">
+                <div id="daily" class="main-item">
+                    <img src="images/burger.jpg">
+                    <h3 class="caption">Daily Special: <span id="specialName"></span> Half Off Select Burger</h3>
+                </div>
+
+                <div id="weekly" class="main-item">
+                    <img src="images/burger.jpg">
+                    <h3 class="caption">Drink of the Week: <span id="specialName"></span> Half Price!</h3>
+                </div>
+
+                <div id="monthly" class="main-item">
+                    <h3>This Month's Special*: </h3><span id="monthlySpecial"></span>
+                    <img id="giftCard" src="images/gift.png">
+                </div>
+            </div>
+            <!--End of Slideshow-->
+
+            <div id="seeItems">
+                <div id="seeDaily" class="reveal">
+                    Daily Meals
+                </div>
+                <div id="seeWeekly" class="reveal">
+                    Weekly Drinks
+                </div>
+                <div id="seeMonthly" class="reveal">
+                    Monthly Deals
+                </div>
+            </div>
+
+            <div id="dayDisplay" class="hidden">
+
+                <h2>Daily Source of Brain...food: Dishes are 50% Off</h2>
+                <ul class="days">
+                    <div>
+                        <li class="Sunday"><img src="images/salad.jpg"></li>
+                        <p>Serpentine Sundays - $4</p>
+                    </div>
+                    <div>
+                        <li class="Monday"><img src="images/chickensandwich.jpg"></li>
+                        <p>Monster Mondays - $8</p>
+                    </div>
+                    <div>
+                        <li class="Tuesday"><img src="images/tacos.jpg"></li>
+                        <p>Toxic Tuesdays - $6</p>
+                    </div>
+                    <div>
+                        <li class="Wednesday"><img src="images/waffles.jpg"></li>
+                        <p>Warlock Wednesdays - $6</p>
+                    </div>
+                    <div>
+                        <li class="Thursday"><img src="images/french-toast.jpg"></li>
+                        <p>Threatening Thursdays - $6</p>
+                    </div>
+                    <div>
+                        <li class="Friday"><img src="images/fishandchips.jpg"></li>
+                        <p>Freakier Fridays - $8</p>
+                    </div>
+                    <div>
+                        <li class="Saturday"><img src="images/burger.jpg"></li>
+                        <p>Satiable Saturday - $8</p>
+                    </div>
+                </ul>
+            </div>
+            <div id="weekDisplay" class="hidden">
+                <h2>Our Weekly Concoctions: Drinks are 50% off</h2>
+                <ul class="weekly">
+                    <div>
+                        <li class="week1"><img src="images/ale.jpg"></li>
+                        <p>Week 1 - Ale $4</p>
+                    </div>
+                    <div>
+                        <li class="week2"><img src="images/stout.jpg"></li>
+                        <p>Week 2 - Stout $4</p>
+                    </div>
+                    <div>
+                        <li class="week3"><img src="images/pilsner.jpg"></li>
+                        <p>Week 3 - Pilsner $4</p>
+                    </div>
+                    <div>
+                        <li class="week4"><img src="images/porter.jpg"></li>
+                        <p>Week 4 - Porter $5</p>
+                    </div>
+                </ul>
+            </div>
+
+            <div id="monthDisplay" class="hidden">
+                <h2>Monthly Monster Deals:</h2>
+                <p>This Month's Special*: <span id="monthlyDeal1"></span></p>
+                <p>Next Month's Special*: <span id="monthlyDeal2"></span></p>
+
+                <em>*All specials are valid only on the weekends, otherwise we'd go broke</em>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="page-wrapper">
+            <div id="footer-wrapper">
+                <div id="social-media-links">
+                    <ul>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                    </ul>
+                </div>
+                <nav id="footer-navigation">
+                    <ul id="footer-nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="locations.html">Locations</a></li>
+                        <li><a href="sitemap.html">Site Map</a></li>
+                        <li><a href="booking.html">Events Booking</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="specials.html">Specials</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="game.html">Contests</a></li>
+                        <li><a href="giftcard.html">Gift Cards</a></li>
+                    </ul>
+                </nav>
+                <div id="location-footer">
+                    <p>205 Humber College Blvd, Etobicoke, ON M9W 5L7</p>
+                    <p>416.966.9100</p>
+                    <p><a href="#">Terms</a></p>
+                    <p><a href="#">Privacy Policy</a></p>
+                    <p> &copy; 2018 At World's End</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/specials.js"></script>
+</body>
+
+</html>

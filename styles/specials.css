@@ -1,0 +1,176 @@
+/*Fonts - 
+Body - font-family: 'Roboto', sans-serif;
+Headers - font-family: 'Noto Serif SC', serif;
+
+Purple - #76749b
+red - #b81c1b
+*/
+h1,
+h2,
+h3 {
+    font-family: 'Noto Serif SC', serif;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.caption {
+    display: block;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.special,
+.view,
+    {
+    padding: 100px;
+    height: 50px;
+    width: 50px;
+    border: solid 1px white;
+    color: white;
+}
+
+
+.days {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto auto auto;
+}
+
+.weekly {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: auto auto auto auto;
+}
+
+.days img {
+    width: 200px;
+    height: 180px;
+    margin-right: 10px;
+}
+
+.weekly img {
+    width: 170px;
+    height: 200px;
+}
+
+#seeItems {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: auto auto auto;
+}
+
+#seeItems div{
+    display: inline-block;
+}
+
+.reveal {
+    text-align: center;
+    padding: 90px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 1.5em;
+    font-family: 'Noto Serif SC', serif;
+    color: black;
+    -webkit-text-stroke-width: 2px;
+    transition: 0.4s;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+#seeDaily {
+    border: solid 2px #b81c1b;
+    -webkit-text-stroke-color: #b81c1b;
+}
+
+#seeWeekly {
+    border: solid 2px #8A2BE2;
+    -webkit-text-stroke-color: #8A2BE2;
+}
+
+#seeMonthly{
+    border: solid 2px white;
+    -webkit-text-stroke-color: white;
+}
+
+.reveal:hover{
+     transform: scale(1.05);
+}
+
+.reveal:active{
+    transform: scale(1.02);
+}
+
+
+/* Slideshow */
+#main-item {
+    width: 100%;
+    height: 500px;
+    border: solid 1px white;
+    margin: 0 auto;
+    display: grid;
+}
+
+#monthlySpecial {
+    font-size: 2em;
+    justify-content: center;
+}
+
+#giftCard{
+    margin-top: 50px;
+    width: 400px;
+    background: white;
+}
+
+/*Code referenced from https://www.w3schools.com/howto/howto_js_slideshow.asp*/
+
+/* Slideshow container */
+.slideshow {
+    display: grid;
+    max-width: 700px; 
+    height: 400px;
+    position: relative;
+    border: solid 1px #696969;
+    margin: 0 auto;
+    justify-items: center;
+    grid-template-columns: auto;
+    text-align: center;
+}
+
+.main-item {
+    height: auto;
+    display: none;
+    margin: 0 auto;
+}
+.main-item img{
+    width: 350px;
+}
+
+#daily img{
+    width: 440px;
+    height: 350px
+}
+#weekly img{
+    height: 350px;
+    width: 300px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}

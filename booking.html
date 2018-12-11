@@ -5,11 +5,12 @@
 <head>
     <meta charset="utf-8">
     <title>Book your event now!</title>
-    <link rel="stylesheet" type="text/css" href="/styles/booking.css">
-    <link rel="stylesheet" type="text/css" href="/styles/global.css">
+    <link rel="stylesheet" type="text/css" href="styles/booking.css">
+    <link rel="stylesheet" type="text/css" href="styles/global.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Roboto" rel="stylesheet">
-    <script src="/jquery-3.3.1.min.js"></script>
-     <link rel="stylesheet"  href="/font/webfontkit/stylesheet.css">
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"  href="font/webfontkit/stylesheet.css">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
         <div class="page-wrapper" id="header-wrapper">
             <div id="logo-and-slogan">
                 <a href="./index.html">
-                    <img id="logo" src="/images/main-logo.png" alt="Restaurant Logo">
+                    <img id="logo" src="images/main-logo.png" alt="Restaurant Logo">
                     <h1 class="hidden">The World's End</h1>
                 </a>
             </div>
@@ -47,99 +48,101 @@
         </div>
     </header>
     <main id="main">
-        <div class="form-wrapper">
-            <div id="confirmation"></div>
-            <form id="bookEvent" action="" onsubmit="return processForm()">
-                <h2>Book your Suffering:</h2>
-                <p class="required hidden" id="requiredFields">&#42; Required Fields</p>
-               
-                <fieldset id="contactDetails">
-                    <legend>Contact</legend>
-                    <ol>
-                        <li>
-                            <label for="name">Name:</label>
-                            <input type="text" class="contactInfo" id="name">
-                        </li>
-                        <li>
-                            <label for="email">Email:</label>
-                              <span class="specific hidden">Enter a valid email </span>
-                            <input type="text" class="contactInfo" id="email">
-                           
-                        </li>
-                        <li>
-                            <label for="phone">Phone Number:</label>
-                             <span class="specific hidden">Enter a valid phone number </span>
-                            <input type="text" class="contactInfo" id="phone">
-                        </li>
-                    </ol>
-                </fieldset>
+        <div class="backgroundImage">
+            <div class="form-wrapper">
+                <div id="confirmation"></div>
+                <form id="bookEvent" action="" onsubmit="return processForm()">
+                    <h2>Book your Suffering:</h2>
+                    <p class="required hidden" id="requiredFields">&#42; Required Fields</p>
 
-                <fieldset id="eventDetails">
-                    <legend>Event Details</legend>
-                    <ol>
-                        <li>
-                            <label for="reserveDate">Date:</label>
-                            <select id="reserveDate">
-                                <option value="">--Select Date--</option>
-                            </select>
-                        </li>
-                        <li id="fullHours">
-                            <label for="fullStart">Start Time:</label>
-                            <select id="fullStart" name="fullStart">
-                                <option value="">--Select a Time--</option>
-                            </select>
-                        </li>
+                    <fieldset id="contactDetails">
+                        <legend>Contact</legend>
+                        <ol>
+                            <li>
+                                <label for="name">Name:</label>
+                                <input type="text" class="contactInfo" id="name">
+                            </li>
+                            <li>
+                                <label for="email">Email:</label>
+                                <span class="specific hidden">Enter a valid email </span>
+                                <input type="text" class="contactInfo" id="email">
 
-                        <li>
-                            <label for="eventSize"> Event Size: </label>
-                            <select id="eventSize" name="eventSize">
-                                <option value="">--Event Size--</option>
-                                <option value="Small">Small (2-9 People)</option>
-                                <option value="Medium">Medium (10-19)</option>
-                                <option value="Large">Large (20+)</option>
-                            </select>
-                        </li>
-                    </ol>
-                </fieldset>
-                <fieldset id="roomChoice">
-                    <label for="room">Choose a Room:</label>
-                    <span>
-                        <input type="radio" name="room" value="Main Hall" checked>
-                        <img title="Our main hall is well suited for medium and large sized events" class="room-img modal" src="/images/scary-room-1.jpg">
-                    </span>
-                    <!--https://www.pexels.com/photo/grayscale-photo-of-chair-inside-the-establishment-162389/-->
-                    <span>
-                        <input type="radio" name="room" value="Casual Room">
-                        <img class="room-img modal" src="/images/scary-room-2.jpg" title="Our casual room is well suited for smaller events">
-                    </span>
-                   <!-- https://www.pexels.com/photo/light-sky-space-abstract-40748/ -->
-                    <span>
-                        <input type="radio" name="room" value="Outdoors">
-                        <img class="room-img modal" src="/images/scary-room-3.jpg" title="Looking to spend some time outside with friends? Our outside area is well suited for all event sizes">
-                    </span>
-                    <!--https://www.pexels.com/photo/night-building-forest-trees-42263/-->
-                </fieldset>
-                <fieldset>
-                    <div class="accomodation">
-                        <label for="accomodation">Special Accomodations:</label>
-                        <textarea id="accomodation"></textarea>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <button class="btn" type="submit">Book Your Doom</button>
-                </fieldset>
-            </form>
+                            </li>
+                            <li>
+                                <label for="phone">Phone Number:</label>
+                                <span class="specific hidden">Enter a valid phone number </span>
+                                <input type="text" class="contactInfo" id="phone">
+                            </li>
+                        </ol>
+                    </fieldset>
+
+                    <fieldset id="eventDetails">
+                        <legend>Event Details</legend>
+                        <ol>
+                            <li>
+                                <label for="reserveDate">Date:</label>
+                                <select id="reserveDate">
+                                    <option value="">--Select Date--</option>
+                                </select>
+                            </li>
+                            <li id="fullHours">
+                                <label for="fullStart">Start Time:</label>
+                                <select id="fullStart" name="fullStart">
+                                    <option value="">--Select a Time--</option>
+                                </select>
+                            </li>
+
+                            <li>
+                                <label for="eventSize"> Event Size: </label>
+                                <select id="eventSize" name="eventSize">
+                                    <option value="">--Event Size--</option>
+                                    <option value="Small">Small (2-9 People)</option>
+                                    <option value="Medium">Medium (10-19)</option>
+                                    <option value="Large">Large (20+)</option>
+                                </select>
+                            </li>
+                        </ol>
+                    </fieldset>
+                    <fieldset id="roomChoice">
+                        <label for="room">Choose a Room:</label>
+                        <span>
+                            <input type="radio" name="room" value="Main Hall" checked>
+                            <img title="Our main hall is well suited for medium and large sized events" class="room-img modal" src="images/scary-room-1.jpg">
+                        </span>
+                        <!--https://www.pexels.com/photo/grayscale-photo-of-chair-inside-the-establishment-162389/-->
+                        <span>
+                            <input type="radio" name="room" value="Casual Room">
+                            <img class="room-img modal" src="images/scary-room-2.jpg" title="Our casual room is well suited for smaller events">
+                        </span>
+                        <!-- https://www.pexels.com/photo/light-sky-space-abstract-40748/ -->
+                        <span>
+                            <input type="radio" name="room" value="Outdoors">
+                            <img class="room-img modal" src="images/scary-room-3.jpg" title="Looking to spend some time outside with friends? Our outside area is well suited for all event sizes">
+                        </span>
+                        <!--https://www.pexels.com/photo/night-building-forest-trees-42263/-->
+                    </fieldset>
+                    <fieldset>
+                        <div class="accomodation">
+                            <label for="accomodation">Special Accomodations:</label>
+                            <textarea id="accomodation"></textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <button class="btn" type="submit">Book Your Doom</button>
+                    </fieldset>
+                </form>
+            </div>
         </div>
     </main>
     <div class="event-wrapper">
         <aside id="pastEvents">
             <h2>Past Events</h2>
             <ul id="eventLinks">
-                <li><img alt="picture of a bride and a skeleton husband" title="Here we see the lovely couple on their big day!" class="event-img modal" src="/images/fantasy-wedding.jpg"></li>
+                <li><img alt="picture of a bride and a skeleton husband" title="Here we see the lovely couple on their big day!" class="event-img modal" src="images/fantasy-wedding.jpg"></li>
                 <!--https://pixabay.com/en/fantasy-bride-zombie-spooky-young-3805320/-->
-                <li><img title="Good ol Jim Bob was scared to death as his family surprised him for his 'deathday'" class="event-img modal" src="/images/skeleton-surprised.jpg"></li>
+                <li><img title="Good ol Jim Bob was scared to death as his family surprised him for his 'deathday'" class="event-img modal" src="images/skeleton-surprised.jpg"></li>
                 <!--https://pixabay.com/en/skeleton-decoration-halloween-death-1784621/-->
-                <li><img title="It cools our hearts to see the gang all back together at the annual family reunion!" class="event-img modal" src="/images/scary-family.jpg"></li>
+                <li><img title="It cools our hearts to see the gang all back together at the annual family reunion!" class="event-img modal" src="images/scary-family.jpg"></li>
                 <!--https://pixabay.com/en/halloween-skeleton-spirit-zombie-2857535/-->
                 <!---->
             </ul>
@@ -185,7 +188,7 @@
             </div>
         </div>
     </footer>
-    <script src="/scripts/booking.js"></script>
+    <script src="scripts/booking.js"></script>
 </body>
 
 </html>
