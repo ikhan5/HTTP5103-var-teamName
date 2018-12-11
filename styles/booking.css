@@ -40,16 +40,12 @@ main {
 }
 
 /* Form */
-#contactDetails {
-    display: flex;
-    flex-flow: row wrap;
-}
 
 .form-wrapper,
 .event-wrapper {
     margin: 0 auto;
     width: 1000px;
-    display: flex;
+
 }
 
 form#bookEvent {
@@ -104,7 +100,7 @@ label {
     float: left;
     width: 55%;
     font-family: 'Noto Serif SC', serif;
-    font-size: 1.15em;
+    font-size: 1em;
 }
 
 #roomChoice span {
@@ -254,7 +250,6 @@ label {
     color: #ccc;
     padding: 10px 0;
     height: 150px;
-    font-size:
 }
 
 .close {
