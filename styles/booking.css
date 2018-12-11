@@ -20,6 +20,8 @@ h3 {
 
 #main {
     position: relative;
+    display: block;
+    background-color: transparent;
 }
 
 .event-img {
@@ -30,7 +32,7 @@ h3 {
     content: "";
     display: block;
     position: absolute;
-    background-image: url("images/church-157066_1280.png") !important;
+    background-image: url("../images/church-157066_1280.png") !important;
   /*  https://pixabay.com/en/church-cloud-cross-grass-157066/*/
     background-position: center;
     background-repeat: no-repeat;
@@ -39,7 +41,7 @@ h3 {
     width: 100%;
     top: 0;
     left: 0;
-    opacity: 0.;
+    opacity: 0.5;
     z-index: -1;
 }
 
@@ -159,6 +161,7 @@ label {
 .required {
     float: right;
     color: red;
+    font-size: 0.8em;
 }
 
 .error {

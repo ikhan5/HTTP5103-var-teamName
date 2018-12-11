@@ -18,22 +18,22 @@ function pageLoaded() {
     var subtractAday = new Date(nextmonth.getTime() - 86400000);
     var daysinmonth = subtractAday.getDate();
     var fullweeks = Math.floor(daysinmonth / 7);
-    var weeknumber = Math.ceil(date.getDate() / 7)-1;
+    var weeknumber = Math.ceil(date.getDate() / 7) - 1;
 
     setImages(day, weeknumber, month);
 
     function setImages(day, week, month) {
         $('#daily').find('img').attr("src", daily[day]);
-        $('#weekly').find('img').attr("src", weekly[3]);
+        $('#weekly').find('img').attr("src", weekly[week]);
         $('#monthly').find('#monthlySpecial').html(monthly[month]);
-        
-        $('#monthlyDeal').find('#monthlyDeal1').html(monthly[month]);
-        
-       if(month === 11){
-           $('#monthlyDeal').find('#monthlyDeal2').html(monthly[0]);
-       } else{
-           $('#monthlyDeal').find('#monthlyDeal2').html(monthly[month+1]);
-       }
+
+        $('#monthDisplay').find('#monthlyDeal1').html(monthly[month]);
+
+        if (month === 11) {
+            $('#monthDisplay').find('#monthlyDeal2').html(monthly[0]);
+        } else {
+            $('#monthDisplay').find('#monthlyDeal2').html(monthly[month + 1]);
+        }
 
         switch (day) {
             case 0:
@@ -75,7 +75,7 @@ function pageLoaded() {
                 $('#weekly').find('#specialName').append("Porter - $5");
                 break;
         }
-        
+
         var slideIndex = 0;
         slideShow();
 
@@ -94,23 +94,20 @@ function pageLoaded() {
             slides[slideIndex - 1].style.display = "block";
             setTimeout(slideShow, time);
         }
-        
-        $('#seeDaily').click(function(){
+
+        $('#seeDaily').click(function () {
             $('#dayDisplay').toggleClass("hidden");
         })
-        
-          $('#seeWeekly').click(function(){
+
+        $('#seeWeekly').click(function () {
             $('#weekDisplay').toggleClass("hidden");
         })
-        
-        $('#seeMonthly').click(function(){
+
+        $('#seeMonthly').click(function () {
             $('#monthDisplay').toggleClass("hidden");
         })
-        
-        
-        
-/* Slideshow Reference: https://www.w3schools.com/howto/howto_js_slideshow.asp
-         */
 
+        /* Slideshow Reference: https://www.w3schools.com/howto/howto_js_slideshow.asp
+         */
     }
 }
